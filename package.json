@@ -7,6 +7,10 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
+    "build:equipment-history-service": "nest build equipment-history-service", 
+    "build:equipment-management-service": "nest build equipment-management-service", 
+    "build:equipment-rental-service": "nest build equipment-rental-service", 
+    "build:user-service": "nest build user-service", 
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

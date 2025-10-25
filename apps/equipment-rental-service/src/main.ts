@@ -3,6 +3,6 @@ import { EquipmentRentalServiceModule } from './equipment-rental-service.module'
 
 async function bootstrap() {
   const app = await NestFactory.create(EquipmentRentalServiceModule);
-  await app.listen(process.env.port ?? 4000);
+  await app.listen(process.env.port ?? 3000);
 }
 bootstrap();

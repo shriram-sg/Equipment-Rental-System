@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  equipment-history-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        - APP_NAME=equipment-history-service
+    # container-name: equipment-history-service
+    # env-file: ./apps/equipment-history-service/.env
+    # port mapping for testing purposes. Remove for production since it'll communicate using a message broker. 
+    ports:
+      - 4000:3000
+    restart: always
+
+  equipment-management-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        - APP_NAME=equipment-management-service
+    # container-name: equipment-management-service
+    # env-file: ./apps/equipment-management-service/.env
+    # port mapping for testing purposes. Remove for production since it'll communicate using a message broker. 
+    ports:
+      - 4001:3000
+    restart: always
+
+  equipment-rental-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        - APP_NAME=equipment-rental-service
+    # container-name: equipment-rental-service
+    # env-file: ./apps/equipment-rental-service/.env
+    # port mapping for testing purposes. Remove for production since it'll communicate using a message broker. 
+    ports:
+      - 4002:3000
+    restart: always
+
+  user-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args: 
+        - APP_NAME=user-service
+    # container-name: user-service
+    # env-file: ./apps/user-service/.env
+    # port mapping for testing purposes. Remove for production since it'll communicate using a message broker. 
+    ports:
+      - 4003:3000
+    restart: always

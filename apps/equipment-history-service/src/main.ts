@@ -3,6 +3,6 @@ import { EquipmentHistoryServiceModule } from './equipment-history-service.modul
 
 async function bootstrap() {
   const app = await NestFactory.create(EquipmentHistoryServiceModule);
-  await app.listen(process.env.port ?? 4002);
+  await app.listen(process.env.port ?? 3000);
 }
 bootstrap();

@@ -3,6 +3,6 @@ import { EquipmentManagementServiceModule } from './equipment-management-service
 
 async function bootstrap() {
   const app = await NestFactory.create(EquipmentManagementServiceModule);
-  await app.listen(process.env.port ?? 4001);
+  await app.listen(process.env.port ?? 3000);
 }
 bootstrap();

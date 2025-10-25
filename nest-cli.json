@@ -1,8 +1,50 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/equipment-rental-service/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/equipment-rental-service/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/equipment-rental-service",
+  "projects": {
+    "equipment-history-service": {
+      "type": "application",
+      "root": "apps/equipment-history-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/equipment-history-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/equipment-history-service/tsconfig.app.json"
+      }
+    },
+    "equipment-management-service": {
+      "type": "application",
+      "root": "apps/equipment-management-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/equipment-management-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/equipment-management-service/tsconfig.app.json"
+      }
+    },
+    "equipment-rental-service": {
+      "type": "application",
+      "root": "apps/equipment-rental-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/equipment-rental-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/equipment-rental-service/tsconfig.app.json"
+      }
+    },
+    "user-service": {
+      "type": "application",
+      "root": "apps/user-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-service/tsconfig.app.json"
+      }
+    }
   }
 }
